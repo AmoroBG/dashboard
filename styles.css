@@ -14,6 +14,7 @@ ul {
 }
 img {
   width: 1rem;
+  cursor: pointer;
 }
 svg{
     fill: white;
@@ -57,4 +58,81 @@ ul.menu-items li{
     gap: 1rem;
     margin: 0.5rem 0;
     cursor: pointer;
+}
+main{
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+main section.header{
+  background-color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.header .top-row, main section.header .bottom-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+main section.header .top-row ul{
+  display: flex;
+}
+div.search {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 16px;
+  padding: 0.125rem 0.5rem;
+}
+div.search input{
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #ccc;
+  padding: 0 0.5rem;
+}
+ul.header-top-row li{
+  padding: 0.125rem 0.25rem;
+}
+main section.header .bottom-row{
+  font-size: 0.8rem;
+}
+.bottom-row ul{
+  display: flex;
+  align-items: center;
+}
+.bottom-row ul.profile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.bottom-row ul.profile img{
+ width: 2rem;
+
+}
+ul li.name{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.hi{
+  font-size: 0.45rem;
+  font-weight: lighter;
+}
+button{
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+}
+button:hover{
+  background-color: blue;
 }

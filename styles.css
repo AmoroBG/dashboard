@@ -5,7 +5,9 @@
 }
 body {
   background-color: #eee;
-  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Utility Classes */
@@ -16,8 +18,8 @@ img {
   width: 1rem;
   cursor: pointer;
 }
-svg{
-    fill: white;
+svg {
+  fill: white;
 }
 
 /* Styles */
@@ -36,6 +38,12 @@ aside.sidebar {
   flex-direction: column;
   gap: 2.5rem;
 }
+aside.sidebar li:hover,
+aside.sidebar .heading:hover {
+  background-color: white;
+  color: royalblue;
+  border-radius: 5px;
+}
 section.heading {
   margin-bottom: 2rem;
   font-size: 1.25rem;
@@ -44,40 +52,41 @@ section.heading {
   align-items: center;
   gap: 1rem;
 }
-section.heading img{
-    width: 1.24rem;
+section.heading img {
+  width: 1.24rem;
 }
 
-ul.menu-items{
-    display: flex;
-    flex-direction: column;
+ul.menu-items {
+  display: flex;
+  flex-direction: column;
 }
-ul.menu-items li{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0.5rem 0;
-    cursor: pointer;
+ul.menu-items li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
 }
-main{
+main {
   display: grid;
   grid-template-rows: 1fr 4fr;
 }
-main section.header{
+main section.header {
   background-color: white;
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main section.header .top-row, main section.header .bottom-row{
+main section.header .top-row,
+main section.header .bottom-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.7rem;
   font-weight: bold;
 }
-main section.header .top-row ul{
+main section.header .top-row ul {
   display: flex;
 }
 div.search {
@@ -87,43 +96,42 @@ div.search {
   border-radius: 16px;
   padding: 0.125rem 0.5rem;
 }
-div.search input{
+div.search input {
   outline: none;
   border: none;
   border-radius: 8px;
   background-color: #ccc;
   padding: 0 0.5rem;
 }
-ul.header-top-row li{
+ul.header-top-row li {
   padding: 0.125rem 0.25rem;
 }
-main section.header .bottom-row{
+main section.header .bottom-row {
   font-size: 0.8rem;
 }
-.bottom-row ul{
+.bottom-row ul {
   display: flex;
   align-items: center;
 }
-.bottom-row ul.profile{
+.bottom-row ul.profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
 }
-.bottom-row ul.profile img{
- width: 2rem;
-
+.bottom-row ul.profile img {
+  width: 2rem;
 }
-ul li.name{
+ul li.name {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.hi{
+.hi {
   font-size: 0.45rem;
   font-weight: lighter;
 }
-button{
+button {
   outline: none;
   border: none;
   border-radius: 16px;
@@ -133,6 +141,53 @@ button{
   color: white;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background-color: blue;
 }
+section.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.25rem;
+  height: 25rem;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  font-size: 0.8rem;
+}
+section.content div {
+  padding: 0.25rem;
+}
+
+section.projects,
+section.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+div.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+div.item {
+  background-color: white;
+  border-radius: 5px;
+  border-left: 5px solid orange;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.announcements-items {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+}
+.announcements-item {
+  background-color: white;
+  width: 6rem;
+  height: 95%;
+  border-radius: 5px;
+}
+
+/* background-color: white;
+width: 6.25rem;
+height: 100%; */
